@@ -574,7 +574,7 @@ CreateAssayObject <- function(
     )
   }
   # Initialize meta.features
-  init.meta.features <- data.frame(row.names = rownames(x = data))
+  init.meta.features <- data.frame(row.names = make.unique(rownames(x = data)))
   assay <- new(
     Class = 'Assay',
     counts = counts,
