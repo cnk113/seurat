@@ -1197,6 +1197,7 @@ SCTransform <- function(
   return.only.var.genes = TRUE,
   seed.use = 1448145,
   verbose = TRUE,
+  split.res = NULL,
   ...
 ) {
   if (!is.null(x = seed.use)) {
@@ -1341,6 +1342,7 @@ SCTransform <- function(
     scale.max = Inf,
     block.size = 750,
     min.cells.to.block = 3000,
+    split.by = split.res
     verbose = verbose
   )
   assay.out <- SetAssayData(
