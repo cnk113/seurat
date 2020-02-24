@@ -1342,7 +1342,7 @@ SCTransform <- function(
     scale.max = Inf,
     block.size = 750,
     min.cells.to.block = 3000,
-    split.by = split.res
+    split.by = split.res,
     verbose = verbose
   )
   assay.out <- SetAssayData(
