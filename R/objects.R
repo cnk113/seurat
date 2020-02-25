@@ -3662,7 +3662,7 @@ ReadH5AD.H5File <- function(
   # Pull cell- and feature-level metadata
   obs <- file[['obs']][]
   x.var <- file[['var']][]
-  rownames(x = x) <-  make.unique(rownames(x = x.var)) <- x.var$index
+  rownames(x = x) <-  rownames(x = x.var) <- make.unique(x.var$index)
   colnames(x = x) <- rownames(x = obs) <- obs$index
   # Pull raw expression matrix and feature-level metadata
   if (file$exists(name = 'raw.X')) {
